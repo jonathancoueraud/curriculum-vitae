@@ -1,0 +1,44 @@
+{
+  "title": "Compétences",
+  "skills": [
+    {
+      "name": "Javascript"
+    },
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "SASS"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "Spring"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "GitLab"
+    },
+    {
+      "name": "Package managers (npm, maven, ...)"
+    },
+    {
+      "name": "Unit test (jasmine, junit, mockito, ...)"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "HTTP"
+    },
+    {
+      "name": "REST"
+    }
+  ]
+}

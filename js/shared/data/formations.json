@@ -1,0 +1,29 @@
+{
+  "title": "formation",
+  "formations": [
+    {
+      "name": "Diplôme d'ingénieur École Supérieure d'Électricité - SUPELEC",
+      "startDate": "2010",
+      "endDate": "2012"
+    },
+    {
+      "name": "Diplôme d'ingénieur Arts et Métiers ParisTech - ENSAM",
+      "result": "Médaille d'Argent",
+      "startDate": "2008",
+      "endDate": "2010"
+    },
+    {
+      "name": "Classes Préparatoires aux Grandes Ecoles",
+      "domain": "MPSI, PSI",
+      "startDate": "2006",
+      "endDate": "2008"
+    },
+    {
+      "name": "Baccalauréat",
+      "domain": "Série scientifique",
+      "result": "Mention Très Bien - Féliciation du Jury",
+      "startDate": "2003",
+      "endDate": "2006"
+    }
+  ]
+}

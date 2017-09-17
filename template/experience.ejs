@@ -1,0 +1,28 @@
+<div class="cv_experience experience">
+    <h3 class="experience_title">
+        <%= title %>
+    </h3>
+    <% jobs.forEach(function(job) { %>
+    <div class="experience_item job <% if (!job.realisations.length) 'job--short' %>" itemscope
+         itemtype="http://schema.org/Event/Job">
+        <h4 class="job_name" itemprop="name"><%= job.name %></h4>
+        <div class="job_location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <span class="job_name" itemprop="name"><%= job.locationName %></span>
+            <span class="job_address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                <span class="job_address-locality"
+                                      itemprop="addressLocality"><%= job.addressLocality %></span>
+                            </span>
+        </div>
+        <div class="job_date">
+            <span class="job_start-date" itemprop="startDate" content=""><%= job.startDate %></span>
+            <span class="job_end-date" itemprop="endDate" content=""><%= job.endDate %></span>
+        </div>
+        <p class="job_description" itemprop="description"><%= job.description %></p>
+        <ul class="job_description-realisations">
+            <% job.realisations.forEach(function (realisation) { %>
+            <li class="job_description-realisation"><%= realisation.description %></li>
+            <% }) %>
+        </ul>
+    </div>
+    <% }); %>
+</div>

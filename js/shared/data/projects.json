@@ -1,0 +1,13 @@
+{
+  "title": "projets",
+  "projects": [
+    {
+      "name": "Waifu",
+      "description": "Application mobile de broadcast vocal - en cours de développement"
+    },
+    {
+      "name": "Scenario",
+      "description": "Rédaction de longs et courts métrages"
+    }
+  ]
+}

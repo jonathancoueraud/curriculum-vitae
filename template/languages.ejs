@@ -1,0 +1,9 @@
+<div class="realisations_item languages">
+    <h4 class="languages_title"><%= title %></h4>
+    <% languages.forEach(function(language) { %>
+    <div class="languages_item language">
+        <span class="language_name"><%= language.name %></span>
+        <span class="language_level"><%= language.level %></span>
+    </div>
+    <% }); %>
+</div>

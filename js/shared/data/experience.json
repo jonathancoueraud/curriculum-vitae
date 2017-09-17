@@ -1,0 +1,71 @@
+{
+  "title": "expérience",
+  "jobs": [
+    {
+      "name": "Ingénieur développement Web",
+      "locationName": "Dassault Systèmes",
+      "addressLocality": "Vélizy-Villacoublay",
+      "startDate": "1493596800000",
+      "endDate": "Aujourd'hui",
+      "description": "Développement de la widget plate-forme, un CMS propriétaire à la base des applications web de Dassault Systèmes.",
+      "realisations": [
+        {
+          "description": "Développement Back-End (stack Spring)"
+        },
+        {
+          "description": "Maintenance d'un pipeline d'intégration continue (GitLab CI - Jenkins)"
+        }
+      ]
+    },
+    {
+      "name": "Ingénieur développement Web",
+      "locationName": "Dassault Systèmes",
+      "addressLocality": "Vélizy-Villacoublay",
+      "startDate": "1420070400000",
+      "endDate": "1493596800000",
+      "description": "Conception de l'application web 3DDrive, un service cloud de stockage et de partage de documents avec des fonctionnalités propres aux contenus 3d.",
+      "realisations": [
+        {
+          "description": "Leader technique Front-End"
+        },
+        {
+          "description": "Définition d'une politique qualité : code review,  formating, linting, ..."
+        },
+        {
+          "description": "Orientation stratégique : migration métier dans un service backend, modélisation basée sur le VFS Linux, nouvelle UX pour améliorer la rétention utilisateur"
+        }
+      ]
+    },
+    {
+      "name": "Ingénieur développement Web",
+      "locationName": "Dassault Systèmes",
+      "addressLocality": "Vélizy-Villacoublay",
+      "startDate": "1356998400000",
+      "endDate": "1420070400000",
+      "description": "Conception de l'application web 3DSpace, un service de gestion d'ACLs pour données PLM",
+      "realisations": [
+        {
+          "description": "Participation à la définition de l'experience utilisateur selon les enjeux mobile first"
+        },
+        {
+          "description": "Implémentation du Front-End"
+        },
+        {
+          "description": "Initiateur d'une refonte des APIs backend selon les paradigmes REST"
+        },
+        {
+          "description": "Architecture et implémentation d'une infrasture Front-End"
+        }
+      ]
+    },
+    {
+      "name": "Stage de fin d’études - développement Software",
+      "locationName": "CANAL+",
+      "addressLocality": "Issy-les-Moulineaux",
+      "startDate": "1333238400000",
+      "endDate": "1343779200000",
+      "description": "Reconnaissance vocale pour myCANAL iOS et interface web d'un OTT STB",
+      "realisations": []
+    }
+  ]
+}

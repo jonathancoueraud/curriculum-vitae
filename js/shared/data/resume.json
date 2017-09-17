@@ -1,0 +1,16 @@
+{
+  "title": "resumé",
+  "description": "logique et créatif",
+  "header": "mes guides de survie",
+  "books": [
+    {
+      "description": "Evans, Eric. Domain-Driven Design: Tackling Complexity in the Heart of Software"
+    },
+    {
+      "description": "Braud, Maxime. Road to a Great Product - Methods, Tools and Hacks"
+    },
+    {
+      "description": "Lavandier, Yves. La Dramaturgie"
+    }
+  ]
+}

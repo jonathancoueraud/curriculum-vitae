@@ -1,0 +1,25 @@
+{
+  "name": "jonathan-coueraud-cv",
+  "version": "1.0.0",
+  "description": "curriculum vitae",
+  "main": "index.js",
+  "scripts": {
+    "build": "async-node bin/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:jonathancoueraud/curriculum-vitae.git"
+  },
+  "author": "jonathan coueraud",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "ejs": "~2.5.7",
+    "eslint": "~4.7.0",
+    "eslint-config-google": "^0.9.1",
+    "bluebird": "~3.5.0",
+    "rimraf": "~2.6.2",
+    "mkdirp": "~0.5.1",
+    "async-to-gen": "~1.3.3"
+  }
+}

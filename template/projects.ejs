@@ -1,0 +1,9 @@
+<div class="realisations_item projects">
+    <h4 class="projects_title"><%= title %></h4>
+    <% projects.forEach(function(project) { %>
+    <div class="projects_item project">
+        <span class="project_name"><%= project.name %></span>
+        <span class="project_description"><%= project.description %></span>
+    </div>
+    <% }); %>
+</div>
