@@ -5,8 +5,8 @@
       "name": "Ingénieur développement Web",
       "locationName": "Dassault Systèmes",
       "addressLocality": "Vélizy-Villacoublay",
-      "startDate": "1493596800000",
-      "endDate": "Aujourd'hui",
+      "startDate": "mai 2017",
+      "endDate": "aujourd'hui",
       "description": "Développement de la widget plate-forme, un CMS propriétaire à la base des applications web de Dassault Systèmes.",
       "realisations": [
         {
@@ -21,8 +21,8 @@
       "name": "Ingénieur développement Web",
       "locationName": "Dassault Systèmes",
       "addressLocality": "Vélizy-Villacoublay",
-      "startDate": "1420070400000",
-      "endDate": "1493596800000",
+      "startDate": "janv. 2015",
+      "endDate": "mai 2017",
       "description": "Conception de l'application web 3DDrive, un service cloud de stockage et de partage de documents avec des fonctionnalités propres aux contenus 3d.",
       "realisations": [
         {
@@ -40,8 +40,8 @@
       "name": "Ingénieur développement Web",
       "locationName": "Dassault Systèmes",
       "addressLocality": "Vélizy-Villacoublay",
-      "startDate": "1356998400000",
-      "endDate": "1420070400000",
+      "startDate": "janv. 2013",
+      "endDate": "janv. 2015",
       "description": "Conception de l'application web 3DSpace, un service de gestion d'ACLs pour données PLM",
       "realisations": [
         {
@@ -62,8 +62,8 @@
       "name": "Stage de fin d’études - développement Software",
       "locationName": "CANAL+",
       "addressLocality": "Issy-les-Moulineaux",
-      "startDate": "1333238400000",
-      "endDate": "1343779200000",
+      "startDate": "avr. 2012",
+      "endDate": "août 2012",
       "description": "Reconnaissance vocale pour myCANAL iOS et interface web d'un OTT STB",
       "realisations": []
     }

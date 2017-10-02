@@ -3,6 +3,8 @@ const bluebird = require('bluebird');
 const fs = bluebird.promisifyAll(require('fs'));
 const rimraf = bluebird.promisify(require('rimraf'));
 const mkdirp = bluebird.promisify(require('mkdirp'));
+const ncp = bluebird.promisify(require('ncp'));
+const sass = bluebird.promisifyAll(require('node-sass'));
 
 const contact = require('../js/shared/data/contact');
 const experience = require('../js/shared/data/experience');
@@ -75,8 +77,27 @@ async function build(debug) {
         await fs.writeFileAsync('./www/index.html', html, 'utf-8');
     }
 
+    async function buildStatic() {
+        let promises = [
+            ncp('./img', './www/img'),
+        ];
+
+        await Promise.all(promises);
+    }
+
+    async function buildSass() {
+        console.log('buildSass');
+
+        let result = await sass.renderAsync({
+            file: './css/main.scss',
+        });
+        await fs.writeFileAsync('./www/main.css', result.css, 'utf-8');
+    }
+
     async function build() {
         await buildHtml();
+        await buildSass();
+        await buildStatic();
     }
 
     console.log('building...');

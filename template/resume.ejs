@@ -1,12 +1,14 @@
 <div class="cv_resume resume">
-    <h3 class="resume_title"><%= title %></h3>
-    <span class="resume_exclamation" itemprop="description"><%= description %></span>
-    <h4 class="resume-guides-header">
-        <%= header %>
-    </h4>
-    <ul class="resume_guides guides">
-        <% books.forEach(function (book) { %>
-        <li class="guides_book"><%= book.description %></li>
-        <% }) %>
-    </ul>
+    <div class="resume_inner">
+        <h3 class="resume_title"><%= title %></h3>
+        <span class="resume_exclamation" itemprop="description"><%= description %></span>
+        <h4 class="resume-guides-header">
+            <%= header %>
+        </h4>
+        <ul class="resume_guides guides">
+            <% books.forEach(function (book) { %>
+            <li class="guides_book"><%= book.description %></li>
+            <% }) %>
+        </ul>
+    </div>
 </div>

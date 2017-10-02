@@ -9,9 +9,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="CV Jonathan Coueraud 2017">
     <meta property="og:description" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Chonburi|Titillium+Web|Josefin+Slab"
+          rel="stylesheet">
+
+    <link href="./main.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="cv" itemscope itemtype="http://schema.org/Person">
+<div class="cv minimalist hidden" itemscope itemtype="http://schema.org/Person">
     <%- header %>
     <%- resume %>
     <%- contact %>
@@ -22,6 +27,47 @@
         <h3 class="realisations_title">réalisations</h3>
         <%- languages %>
         <%- projects %>
+    </div>
+</div>
+<div class="cv columnist" itemscope itemtype="http://schema.org/Person">
+    <%- header %>
+    <%- resume %>
+    <div class="columnist_body-wrapper">
+        <div class="columnist_wrapper-left">
+            <%- experience %>
+            <%- skills %>
+        </div>
+        <div class="columnist_wrapper-right">
+            <%- formations %>
+            <div class="cv_realisations realisations">
+                <h3 class="realisations_title">réalisations</h3>
+                <%- languages %>
+                <%- projects %>
+            </div>
+            <%- contact %>
+        </div>
+    </div>
+</div>
+<div class="cv leaf hidden" itemscope itemtype="http://schema.org/Person">
+    <div class="header-wrapper">
+        <%- header %>
+        <div class="header-wrapper_footer"></div>
+    </div>
+    <div class="body">
+        <div class="leaf_wrapper-left">
+            <%- contact %>
+            <%- formations %>
+            <%- skills %>
+            <div class="cv_realisations realisations">
+                <h3 class="realisations_title">réalisations</h3>
+                <%- languages %>
+                <%- projects %>
+            </div>
+        </div>
+        <div class="leaf_wrapper-right">
+            <%- resume %>
+            <%- experience %>
+        </div>
     </div>
 </div>
 </body>

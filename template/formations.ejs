@@ -1,21 +1,21 @@
 <div class="cv_formations formations">
     <h3 class="formation_title">
-        <% title %>
+        <%= title %>
     </h3>
     <% formations.forEach(function(formation) { %>
     <div class="formations_item formation" itemprop="alumniOf" itemscope
          itemtype="http://schema.org/EducationalOrganisation">
         <h4 class="formation_name" itemprop="name"><%= formation.name %></h4>
-        <% if (formation.domain) { %>
-        <p class="formation_domain"><%= formation.domain %></p>
-        <% } %>
-        <% if (formation.result) { %>
-        <span class="formation_result"><%= formation.result %></span>
-        <% } %>
         <div class="formation_date">
             <span class="formation_start-date"><%= formation.startDate %></span>
             <span class="formation_end-date"><%= formation.endDate %></span>
         </div>
+        <% if (formation.domain) { %>
+        <div class="formation_domain"><%= formation.domain %></div>
+        <% } %>
+        <% if (formation.result) { %>
+        <div class="formation_result"><%= formation.result %></div>
+        <% } %>
     </div>
     <% }); %>
 </div>

@@ -1,0 +1,607 @@
+$margin: 0.938em;
+
+@mixin ellipsis() {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.name_first, .name_last {
+  display: block;
+  @include ellipsis;
+}
+
+.contact {
+  align-content: flex-start;
+  margin-bottom: $margin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact_value {
+  flex: 1;
+  @include ellipsis;
+}
+
+.resume_exclamation {
+  display: inline-block;
+}
+
+.resume_exclamation:after {
+  content: '!';
+  padding: 0 0.188em;
+}
+
+.resume-guides-header {
+  display: inline-block;
+}
+
+.resume-guides-header:after {
+  content: ':';
+}
+
+.guides_book:before {
+  content: '-';
+}
+
+.job_location {
+  display: inline;
+}
+
+.job_date {
+  display: inline;
+}
+
+.job_date:before {
+  content: '|';
+  padding: 0 0.125em;
+}
+
+.job_end-date:before {
+  content: '-';
+  padding: 0 0.313em;
+  margin-left: -0.188em;
+}
+
+.job_address {
+  display: none;
+}
+
+.job_description {
+  margin: 0.188em 0 0;
+}
+
+.job_description-realisation:before {
+  content: '-';
+  padding: 0.188em;
+}
+
+.formation_name {
+  display: inline;
+}
+
+.formation_date {
+  display: inline;
+}
+
+.formation_date:before {
+  content: '|';
+  padding: 0 0.125em;
+}
+
+.formation_end-date:before {
+  content: '-';
+  padding: 0 0.188em;
+  margin-left: -0.125em;
+}
+
+.formations_item {
+  margin-top: 0.625em;
+  flex: 1 100%;
+}
+
+.formations_item:first-of-type {
+  margin-top: 0;
+}
+
+.skill {
+  font-size: 1em;
+  display: inline;
+}
+
+.skills_item:after {
+  content: ',';
+}
+
+.skills_item:last-child:after {
+  content: '.';
+}
+
+.projects_title {
+  margin-top: $margin;
+}
+
+.language_name:after, .project_name:after {
+  content: ':';
+  padding: 0 0.125em;
+}
+
+.contact_item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 1.563em;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+.svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.313em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: black;
+}
+
+.svg-icon circle {
+  stroke: black;
+  stroke-width: 1;
+}
+
+$formationDomainFontSize: 0.90em;
+
+.formation_domain {
+  font-size: $formationDomainFontSize;
+}
+
+.formation_result {
+  font-size: $formationDomainFontSize;
+}
+
+@mixin minimalistTitle {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.313em;
+  margin: 0 0 0.625em;
+}
+
+@mixin minimalistSection($order) {
+  order: $order;
+  flex: 1 100%;
+  width: 100%;
+  margin-top: 3.750em;
+}
+
+.minimalist {
+
+  &.cv {
+    padding: 1.563em;
+    font-family: 'Titillium Web', sans-serif;
+    width: 850px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+  }
+
+  @media print {
+    &.cv {
+      font-size: 13px;
+    }
+  }
+
+  .cv_header {
+    font-family: 'Julius Sans One', sans-serif;
+    order: 0;
+    flex: 1 100%;
+    width: 100%;
+  }
+
+  .name {
+    font-size: 2.5em;
+    letter-spacing: 0.313em;
+    font-weight: bold;
+  }
+
+  .name_first {
+    display: inline;
+  }
+
+  .name_last {
+    display: inline;
+  }
+
+  .title {
+    margin: 0.938em 0 0;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .cv_contact {
+    font-family: 'Julius Sans One', sans-serif;
+    @include minimalistSection(1);
+    margin-top: 2.188em;
+  }
+
+  .contact_title {
+    display: none;
+  }
+
+  .contact_telephone {
+    padding-right: 1.875em;
+  }
+
+  .contact_social {
+    flex: 1 100%;
+  }
+
+  .contact_item {
+    margin-top: 0.625em;
+  }
+
+  .cv_resume {
+    @include minimalistSection(2);
+  }
+
+  .resume_title {
+    @include minimalistTitle;
+  }
+
+  .cv_experience {
+    @include minimalistSection(3);
+  }
+
+  .experience_title {
+    @include minimalistTitle;
+  }
+
+  .experience_item:not(:first-of-type) {
+    margin-top: 2.188em;
+  }
+
+  .job_description-realisation, .job_description {
+    font-size: 0.9em;
+  }
+
+  .job_name {
+    text-transform: uppercase;
+  }
+
+  .job_company {
+    text-transform: uppercase;
+  }
+
+  .formation_title {
+    @include minimalistTitle;
+  }
+
+  .cv_formations {
+    @include minimalistSection(4);
+  }
+
+  .cv_realisations {
+    @include minimalistSection(5);
+  }
+
+  .realisations_title {
+    @include minimalistTitle;
+  }
+
+  .languages_title {
+    text-transform: uppercase;
+  }
+
+  .projects_title {
+    text-transform: uppercase;
+  }
+
+  .cv_skills {
+    @include minimalistSection(6);
+  }
+
+  .skills_title {
+    @include minimalistTitle;
+  }
+}
+
+@mixin title() {
+  text-transform: uppercase;
+  font-family: Chonburi, sans-serif;
+  font-weight: bold;
+}
+
+@mixin separator($position:'bottom') {
+  @if ($position == 'top') {
+    border-top: solid black 0.188em;
+    padding-top: 2.813em;
+    margin-top: 2.813em;
+  } @else {
+    border-bottom: solid black 0.188em;
+    padding-bottom: 2.813em;
+    margin-bottom: 2.813em;
+  }
+}
+
+@mixin columnistTitle() {
+  @include title;
+  margin-bottom: $margin;
+  flex: 1 100%;
+}
+
+@mixin columnistSection($order, $separator:false) {
+  align-content: flex-start;
+  order: $order;
+  @if $separator {
+    @include separator($separator);
+  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 100%;
+  width: 100%;
+}
+
+@mixin columnistWrapper($order) {
+  order: $order;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-content: flex-start;
+}
+
+.columnist {
+
+  &.cv {
+    padding: 1.563em;
+  }
+
+  @media print {
+    &.cv {
+      font-size: 12px;
+    }
+  }
+
+  .header {
+    order: 1;
+    @include title;
+    margin-bottom: $margin;
+  }
+
+  .header_name {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    font-size: 2.5em;
+  }
+
+  .name_first {
+    border-top: solid black 0.08em;
+  }
+
+  .name_last {
+    border-bottom: solid black 0.08em;
+  }
+
+  .header_title {
+    max-width: 270px;
+  }
+
+  .cv_resume {
+    @include columnistSection(2);
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  @media print {
+    .cv_resume {
+      flex: 1;
+    }
+  }
+
+  .resume_title {
+    @include columnistTitle;
+  }
+
+  .columnist_wrapper-left {
+    @include columnistWrapper(1);
+    padding-right: 2 * $margin;
+  }
+
+  .experience {
+    @include columnistSection(1, true);
+  }
+
+  .experience_title {
+    @include columnistTitle;
+  }
+
+  .experience_item:not(:first-of-type) {
+    margin-top: 0.938em;
+  }
+
+  .job_name {
+    font-weight: bold;
+  }
+
+  .job_location {
+    font-weight: bold;
+  }
+
+  .realisations {
+    @include columnistSection(2);
+    @include separator;
+  }
+
+  .realisations_title {
+    @include columnistTitle;
+  }
+
+  .languages_title, .projects_title {
+    font-weight: bold;
+  }
+
+  .columnist_body-wrapper {
+    @include columnistSection(3, 'top');
+  }
+
+  .columnist_wrapper-right {
+    @include columnistWrapper(2);
+  }
+
+  .formations {
+    @include columnistSection(1);
+    @include separator;
+  }
+
+  .formation_title {
+    @include columnistTitle;
+  }
+
+  .skills {
+    @include columnistSection(2);
+  }
+
+  @media screen and (max-width: 635px) {
+    .skills {
+      @include separator;
+    }
+  }
+
+  .skills_title {
+    @include columnistTitle;
+  }
+
+  .contact {
+    margin-bottom: $margin;
+    @include columnistSection(3);
+  }
+
+  .contact_title {
+    @include columnistTitle;
+  }
+
+  .contact_item {
+    flex: 1 100%;
+    width: 100%;
+    @include ellipsis
+  }
+}
+
+.leaf {
+
+  &.cv {
+    background-color: #FFEBE6;
+  }
+
+  .header-wrapper {
+    width: 100%;
+  }
+
+  .cv_header {
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 50px 25px;
+    opacity: 0.70;
+  }
+
+  @media screen and (min-width: 430px) {
+    .name {
+      letter-spacing: 5px;
+    }
+  }
+
+  .name {
+    font-family: 'Josefin Slab', sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 600px) {
+    .name_first {
+      margin-right: 15px;
+    }
+  }
+
+  .title {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .header-wrapper_footer {
+    height: 35px;
+    background-image: url(./img/feuille_frise_pink.png);
+  }
+
+  .body {
+    background-color: #FFFFFF;
+    width: 100%;
+  }
+}

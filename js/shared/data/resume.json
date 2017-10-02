@@ -1,7 +1,7 @@
 {
   "title": "resumé",
-  "description": "logique et créatif",
-  "header": "mes guides de survie",
+  "description": "Logique et créatif",
+  "header": "Mes guides de survie",
   "books": [
     {
       "description": "Evans, Eric. Domain-Driven Design: Tackling Complexity in the Heart of Software"

@@ -7,7 +7,7 @@
          itemtype="http://schema.org/Event/Job">
         <h4 class="job_name" itemprop="name"><%= job.name %></h4>
         <div class="job_location" itemprop="location" itemscope itemtype="http://schema.org/Place">
-            <span class="job_name" itemprop="name"><%= job.locationName %></span>
+            <span class="job_company" itemprop="name"><%= job.locationName %></span>
             <span class="job_address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                                 <span class="job_address-locality"
                                       itemprop="addressLocality"><%= job.addressLocality %></span>

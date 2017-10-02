@@ -14,12 +14,14 @@
   "author": "jonathan coueraud",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "async-to-gen": "~1.3.3",
+    "bluebird": "~3.5.0",
     "ejs": "~2.5.7",
     "eslint": "~4.7.0",
     "eslint-config-google": "^0.9.1",
-    "bluebird": "~3.5.0",
-    "rimraf": "~2.6.2",
     "mkdirp": "~0.5.1",
-    "async-to-gen": "~1.3.3"
+    "ncp": "^2.0.0",
+    "node-sass": "^4.5.3",
+    "rimraf": "~2.6.2"
   }
 }
