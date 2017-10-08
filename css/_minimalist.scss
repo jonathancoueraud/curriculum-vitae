@@ -170,4 +170,9 @@ $formationDomainFontSize: 0.90em;
   .skills_title {
     @include minimalistTitle;
   }
+
+  .qr-code {
+    right: 15px;
+    bottom: 15px;
+  }
 }

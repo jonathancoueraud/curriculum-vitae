@@ -58,6 +58,12 @@
     height: 100%;
   }
 
+  @media print {
+    .contact_item {
+      display: none;
+    }
+  }
+
   .contact_icon {
     pointer-events: none;
   }
