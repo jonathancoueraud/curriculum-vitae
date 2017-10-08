@@ -1,0 +1,230 @@
+.material {
+
+  $primaryColor: #E91E63;
+
+  @mixin materialTitle {
+    font-size: 1.5em;
+    margin-bottom: 0.833em;
+  }
+
+  &.cv {
+    font-family: Roboto, sans-serif;
+    padding-bottom: 90px;
+  }
+
+  @media print {
+    &.cv {
+      padding-bottom: 0;
+      font-size: 12px;
+    }
+
+    .material-body {
+      padding-top: 15px;
+    }
+  }
+
+  .header-wrapper {
+    width: 100%;
+    padding: 0 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    background-color: $primaryColor;
+    color: #FFFFFF;
+  }
+
+  .cv_contact {
+    width: 100%;
+    height: 3.5em;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  .contact_title {
+    display: none;
+  }
+
+  .contact_item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 48px;
+    height: 100%;
+  }
+
+  .contact_icon {
+    pointer-events: none;
+  }
+
+  .contact_value {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .cv_header {
+    width: 100%;
+  }
+
+  .header {
+    padding-left: 56px;
+  }
+
+  .header_name {
+    display: inline-block;
+    min-height: 1.78em;
+    font-size: 2.813em;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .header_title {
+    min-height: 2.59em;
+    font-size: 2.125em;
+    padding-bottom: 0.471em;
+  }
+
+  .name_first {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .name_last {
+    display: inline-block;
+    max-width: 100%;
+    @include ellipsis;
+  }
+
+  .material-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 4.5em;
+    padding-left: 4.5em;
+    width: 100%;
+  }
+
+  .material-body_left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 25%;
+    padding-bottom: 2.125em;
+    align-content: flex-start;
+    padding-right: 2.250em;
+  }
+
+  .formations {
+    margin-bottom: 2.125em;
+  }
+
+  .formation {
+    order: 1;
+    flex: 1 75%;
+    margin-bottom: 0.88em;
+  }
+
+  .formation_title {
+    @include materialTitle;
+  }
+
+  .formation_title:first-letter {
+    text-transform: uppercase;
+  }
+
+  .realisations {
+    order: 2;
+    flex: 1 100%;
+    margin-bottom: 2.125em;
+  }
+
+  .realisations_title {
+    @include materialTitle;
+  }
+
+  .realisations_title:first-letter {
+    text-transform: uppercase;
+  }
+
+  .skills {
+    order: 3;
+    flex: 1 100%;
+  }
+
+  .skills_title {
+    @include materialTitle;
+  }
+
+  .skills_title:first-letter {
+    text-transform: uppercase;
+  }
+
+  .material-body_right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 50%;
+    padding-bottom: 2.125em;
+    padding-right: 2.250em;
+    align-items: flex-start;
+  }
+
+  @media print {
+    .material-body_left {
+      padding-bottom: 0;
+    }
+
+  }
+
+  .resume {
+    order: 1;
+    flex: 1 100%;
+    margin-bottom: 2.125em;
+  }
+
+  .resume_title {
+    @include materialTitle;
+  }
+
+  .resume_title:first-letter {
+    text-transform: uppercase;
+  }
+
+  .resume_guides {
+    margin-top: 1em;
+  }
+
+  .experience {
+    order: 2;
+    flex: 1 100%;
+  }
+
+  .experience_title {
+    @include materialTitle;
+  }
+
+  .experience_title:first-letter {
+    text-transform: uppercase;
+  }
+
+  .job_name {
+    font-weight: bold;
+  }
+
+  .job_description {
+    margin-top: 0.750em;
+  }
+
+  .experience_item:not(:last-child) {
+    margin-bottom: 1.250em;
+  }
+}

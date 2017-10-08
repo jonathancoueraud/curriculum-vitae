@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.name_first, .name_last {
+  @include ellipsis;
+}
+
+.contact {
+  align-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact_value {
+  flex: 1;
+  @include ellipsis;
+}
+
+.resume_exclamation {
+  display: inline-block;
+}
+
+.resume_exclamation:after {
+  content: '!';
+  padding: 0 0.188em;
+}
+
+.resume-guides-header {
+  display: inline-block;
+}
+
+.resume-guides-header:after {
+  content: ':';
+}
+
+.guides_book:before {
+  content: '-';
+}
+
+.job_location {
+  display: inline;
+}
+
+.job_date {
+  display: inline;
+}
+
+.job_date:before {
+  content: '|';
+  padding: 0 0.125em;
+}
+
+.job_end-date:before {
+  content: '-';
+  padding: 0 0.313em;
+  margin-left: -0.188em;
+}
+
+.job_address {
+  display: none;
+}
+
+.job_description {
+  margin: 0.188em 0 0;
+}
+
+.job_description-realisation:before {
+  content: '-';
+  padding: 0.188em;
+}
+
+.formation_name {
+  display: inline;
+}
+
+.formation_date {
+  display: inline;
+}
+
+.formation_date:before {
+  content: '|';
+  padding: 0 0.125em;
+}
+
+.formation_end-date:before {
+  content: '-';
+  padding: 0 0.188em;
+  margin-left: -0.125em;
+}
+
+.formations_item {
+  margin-top: 0.625em;
+  flex: 1 100%;
+}
+
+.formations_item:first-of-type {
+  margin-top: 0;
+}
+
+.skill {
+  font-size: 1em;
+  display: inline;
+}
+
+.skills_item:after {
+  content: ',';
+}
+
+.skills_item:last-child:after {
+  content: '.';
+}
+
+.projects_title {
+  margin-top: 0.938em;
+}
+
+.language_name:after, .project_name:after {
+  content: ':';
+  padding: 0 0.125em;
+}
+
+.contact_item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 1.563em;
+  font-weight: bold;
+  max-width: 100%;
+}

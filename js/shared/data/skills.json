@@ -11,19 +11,13 @@
       "name": "CSS"
     },
     {
-      "name": "SASS"
+      "name": "Sass"
     },
     {
       "name": "Java"
     },
     {
-      "name": "Spring"
-    },
-    {
-      "name": "Git"
-    },
-    {
-      "name": "GitLab"
+      "name": "Spring stack"
     },
     {
       "name": "Package managers (npm, maven, ...)"
@@ -39,6 +33,12 @@
     },
     {
       "name": "REST"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "GitLab"
     }
   ]
 }

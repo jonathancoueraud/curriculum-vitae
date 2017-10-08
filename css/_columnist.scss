@@ -1,0 +1,193 @@
+$margin: 0.938em;
+
+@mixin title() {
+  text-transform: uppercase;
+  font-family: Chonburi, sans-serif;
+  font-weight: bold;
+}
+
+@mixin separator($position:'bottom') {
+  @if ($position == 'top') {
+    border-top: solid black 0.188em;
+    padding-top: 2.813em;
+    margin-top: 2.813em;
+  } @else {
+    border-bottom: solid black 0.188em;
+    padding-bottom: 2.813em;
+    margin-bottom: 2.813em;
+  }
+}
+
+@mixin columnistTitle() {
+  @include title;
+  margin-bottom: $margin;
+  flex: 1 100%;
+}
+
+@mixin columnistSection($order, $separator:false) {
+  align-content: flex-start;
+  order: $order;
+  @if $separator {
+    @include separator($separator);
+  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 100%;
+  width: 100%;
+}
+
+@mixin columnistWrapper($order) {
+  order: $order;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-content: flex-start;
+}
+
+.columnist {
+
+  &.cv {
+    padding: 1.563em 1.563em 90px;
+  }
+
+  @media print {
+    &.cv {
+      padding-bottom: 1.563em;
+      font-size: 12px;
+    }
+  }
+
+  .header {
+    order: 1;
+    @include title;
+    margin-bottom: $margin;
+  }
+
+  .header_name {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    font-size: 2.5em;
+  }
+
+  .name_first {
+    display: block;
+    border-top: solid black 0.08em;
+  }
+
+  .name_last {
+    display: block;
+    border-bottom: solid black 0.08em;
+  }
+
+  .header_title {
+    max-width: 270px;
+  }
+
+  .cv_resume {
+    @include columnistSection(2);
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  @media print {
+    .cv_resume {
+      flex: 1;
+    }
+  }
+
+  .resume_title {
+    @include columnistTitle;
+  }
+
+  .columnist_wrapper-left {
+    @include columnistWrapper(1);
+    padding-right: 2 * $margin;
+  }
+
+  .experience {
+    @include columnistSection(1, true);
+  }
+
+  .experience_title {
+    @include columnistTitle;
+  }
+
+  .experience_item:not(:first-of-type) {
+    margin-top: 0.938em;
+  }
+
+  .job_name {
+    font-weight: bold;
+  }
+
+  .job_location {
+    font-weight: bold;
+  }
+
+  .realisations {
+    @include columnistSection(2);
+    @include separator;
+  }
+
+  .realisations_title {
+    @include columnistTitle;
+  }
+
+  .languages_title, .projects_title {
+    font-weight: bold;
+  }
+
+  .columnist_body-wrapper {
+    @include columnistSection(3, 'top');
+  }
+
+  .columnist_wrapper-right {
+    @include columnistWrapper(2);
+  }
+
+  .formations {
+    @include columnistSection(1);
+    @include separator;
+  }
+
+  .formation_title {
+    @include columnistTitle;
+  }
+
+  .skills {
+    @include columnistSection(2);
+  }
+
+  @media screen and (max-width: 635px) {
+    .skills {
+      @include separator;
+    }
+  }
+
+  .skills_title {
+    @include columnistTitle;
+  }
+
+  .contact {
+    margin-bottom: $margin;
+    @include columnistSection(3);
+  }
+
+  .contact_title {
+    @include columnistTitle;
+  }
+
+  .contact_item {
+    flex: 1 100%;
+    width: 100%;
+    @include ellipsis
+  }
+
+  .contact_icon {
+    margin-right: 10px;
+  }
+}

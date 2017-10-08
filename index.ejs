@@ -5,31 +5,16 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1.0">
     <title>CV Jonathan Coueraud 2017</title>
     <meta name="theme-color" content="#6387F5">
-    <link rel="icon" href="img/my-picture.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CV Jonathan Coueraud 2017">
     <meta property="og:description" content="">
-
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Chonburi|Titillium+Web|Josefin+Slab"
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Titillium+Web|Josefin+Slab|Roboto"
           rel="stylesheet">
-
     <link href="./main.css" type="text/css" rel="stylesheet">
+    <style><%- criticalCss %></style>
 </head>
 <body>
-<div class="cv minimalist hidden" itemscope itemtype="http://schema.org/Person">
-    <%- header %>
-    <%- resume %>
-    <%- contact %>
-    <%- experience %>
-    <%- formations %>
-    <%- skills %>
-    <div class="cv_realisations realisations">
-        <h3 class="realisations_title">réalisations</h3>
-        <%- languages %>
-        <%- projects %>
-    </div>
-</div>
-<div class="cv columnist" itemscope itemtype="http://schema.org/Person">
+<div class="cv js_cv columnist hidden" itemscope itemtype="http://schema.org/Person">
     <%- header %>
     <%- resume %>
     <div class="columnist_body-wrapper">
@@ -48,14 +33,26 @@
         </div>
     </div>
 </div>
-<div class="cv leaf hidden" itemscope itemtype="http://schema.org/Person">
-    <div class="header-wrapper">
-        <%- header %>
-        <div class="header-wrapper_footer"></div>
+<div class="cv js_cv minimalist hidden" itemscope itemtype="http://schema.org/Person">
+    <%- header %>
+    <%- resume %>
+    <%- contact %>
+    <%- experience %>
+    <%- formations %>
+    <%- skills %>
+    <div class="cv_realisations realisations">
+        <h3 class="realisations_title">réalisations</h3>
+        <%- languages %>
+        <%- projects %>
     </div>
-    <div class="body">
-        <div class="leaf_wrapper-left">
-            <%- contact %>
+</div>
+<div class="cv js_cv material" itemscope itemtype="http://schema.org/Person">
+    <div class="header-wrapper">
+        <%- contact %>
+        <%- header %>
+    </div>
+    <div class="material-body">
+        <div class="material-body_left">
             <%- formations %>
             <%- skills %>
             <div class="cv_realisations realisations">
@@ -64,11 +61,13 @@
                 <%- projects %>
             </div>
         </div>
-        <div class="leaf_wrapper-right">
+        <div class="material-body_right">
             <%- resume %>
             <%- experience %>
         </div>
     </div>
 </div>
+<%- fabButton %>
+<%- mainJs %>
 </body>
 </html>

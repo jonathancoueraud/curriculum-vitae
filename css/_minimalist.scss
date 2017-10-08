@@ -1,0 +1,168 @@
+$margin: 0.938em;
+$formationDomainFontSize: 0.90em;
+
+.formation_domain {
+  font-size: $formationDomainFontSize;
+}
+
+.formation_result {
+  font-size: $formationDomainFontSize;
+}
+
+@mixin minimalistTitle {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.313em;
+  margin: 0 0 0.625em;
+}
+
+@mixin minimalistSection($order) {
+  order: $order;
+  flex: 1 100%;
+  width: 100%;
+  margin-top: 3.750em;
+}
+
+.minimalist {
+
+  &.cv {
+    padding: 1.563em 1.563em 90px;
+    font-family: 'Titillium Web', sans-serif;
+    width: 850px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+  }
+
+  @media print {
+    &.cv {
+      padding-bottom: 1.563em;
+      font-size: 13px;
+    }
+  }
+
+  .cv_header {
+    font-family: 'Julius Sans One', sans-serif;
+    order: 0;
+    flex: 1 100%;
+    width: 100%;
+  }
+
+  .name {
+    font-size: 2.5em;
+    letter-spacing: 0.313em;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 635px) {
+    .name {
+      letter-spacing: initial;
+    }
+  }
+
+  .name_first {
+    display: inline-block;
+  }
+
+  .name_last {
+    display: inline-block;
+  }
+
+  .title {
+    margin: 0.938em 0 0;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .cv_contact {
+    font-family: 'Julius Sans One', sans-serif;
+    @include minimalistSection(1);
+    margin-top: 2.188em;
+    margin-bottom: $margin;
+  }
+
+  .contact_title {
+    display: none;
+  }
+
+  .contact_telephone {
+    padding-right: 1.875em;
+  }
+
+  .contact_social {
+    flex: 1 100%;
+  }
+
+  .contact_item {
+    margin-top: 0.625em;
+  }
+
+  .contact_icon {
+    margin-right: 10px;
+  }
+
+  .cv_resume {
+    @include minimalistSection(2);
+  }
+
+  .resume_title {
+    @include minimalistTitle;
+  }
+
+  .cv_experience {
+    @include minimalistSection(3);
+  }
+
+  .experience_title {
+    @include minimalistTitle;
+  }
+
+  .experience_item:not(:first-of-type) {
+    margin-top: 2.188em;
+  }
+
+  .job_description-realisation, .job_description {
+    font-size: 0.9em;
+  }
+
+  .job_name {
+    text-transform: uppercase;
+  }
+
+  .job_company {
+    text-transform: uppercase;
+  }
+
+  .formation_title {
+    @include minimalistTitle;
+  }
+
+  .cv_formations {
+    @include minimalistSection(4);
+  }
+
+  .cv_realisations {
+    @include minimalistSection(5);
+  }
+
+  .realisations_title {
+    @include minimalistTitle;
+  }
+
+  .languages_title {
+    text-transform: uppercase;
+  }
+
+  .projects_title {
+    text-transform: uppercase;
+  }
+
+  .cv_skills {
+    @include minimalistSection(6);
+  }
+
+  .skills_title {
+    @include minimalistTitle;
+  }
+}

@@ -56,48 +56,85 @@ async function build(debug) {
         return ejs.render(html, projects);
     }
 
+    async function buildFabButton() {
+        const html = await fs.readFileAsync('./template/fab-button.ejs', 'utf-8');
+        return ejs.render(html, projects);
+    }
 
-    async function buildHtml() {
-        console.log('buildHtml');
+    async function buildMainJs() {
+        const js = await fs.readFileAsync('./js/main.js', 'utf-8');
+        return ejs.render('<script type="text/javascript">' + js + '</script>', projects);
+    }
+
+
+    async function writeHtml() {
+        console.log('writeHtml');
 
         let html = await fs.readFileAsync('./index.ejs', 'utf-8');
-        let htmlMap = {
-            header: await buildHeaderHtml(),
-            resume: await buildResumeHtml(),
-            contact: await buildContactHtml(),
-            experience: await buildExperienceHtml(),
-            formations: await buildFormationHtml(),
-            skills: await buildSkillsHtml(),
-            languages: await buildLanguagesHtml(),
-            projects: await buildProjectsHtml(),
-        };
+        let htmls = await Promise.all([
+            buildHeaderHtml(),
+            buildResumeHtml(),
+            buildContactHtml(),
+            buildExperienceHtml(),
+            buildFormationHtml(),
+            buildSkillsHtml(),
+            buildLanguagesHtml(),
+            buildProjectsHtml(),
+            buildFabButton(),
+            buildMainJs(),
+            buildCriticalCss(),
+        ]);
+
+        let htmlMap = ['header', 'resume', 'contact', 'experience',
+            'formations', 'skills', 'languages', 'projects', 'fabButton',
+            'mainJs', 'criticalCss']
+                .reduce((prev, crr, index) => {
+                    prev[crr] = htmls[index];
+                    return prev;
+                }, {});
 
         html = ejs.render(html, htmlMap);
 
         await fs.writeFileAsync('./www/index.html', html, 'utf-8');
     }
 
-    async function buildStatic() {
+    async function writeStatic() {
         let promises = [
-            ncp('./img', './www/img'),
+            ncp('./asset', './www/'),
         ];
 
         await Promise.all(promises);
     }
 
-    async function buildSass() {
-        console.log('buildSass');
+    async function writeMainCss() {
+        console.log('writeMainCss');
 
-        let result = await sass.renderAsync({
+        let mainCss = await sass.renderAsync({
             file: './css/main.scss',
         });
-        await fs.writeFileAsync('./www/main.css', result.css, 'utf-8');
+
+        await fs.writeFileAsync('./www/main.css', mainCss.css, 'utf-8');
+    }
+
+    async function buildCriticalCss() {
+        console.log('buildCriticalCss');
+
+        let font = await fs.readFileAsync('./font/chonburi-regular.ttf');
+        let fontBase64 = new Buffer(font, 'utf-8').toString('base64');
+
+        let critical = await sass.renderAsync({
+            data: '$base64Url:url(data:application/x-font-woff;charset=utf-8;base64,' + fontBase64 + ');@import \'./css/_main-critical.scss\'',
+        });
+
+        console.log(critical.css.toString());
+
+        return critical.css;
     }
 
     async function build() {
-        await buildHtml();
-        await buildSass();
-        await buildStatic();
+        await writeHtml();
+        await writeMainCss();
+        await writeStatic();
     }
 
     console.log('building...');
