@@ -125,9 +125,7 @@ async function build(debug) {
         let critical = await sass.renderAsync({
             data: '$base64Url:url(data:application/x-font-woff;charset=utf-8;base64,' + fontBase64 + ');@import \'./css/_main-critical.scss\'',
         });
-
-        console.log(critical.css.toString());
-
+        
         return critical.css;
     }
 
