@@ -57,7 +57,7 @@ $formationDomainFontSize: 0.90em;
 
   @media screen and (max-width: 635px) {
     .name {
-      letter-spacing: initial;
+      letter-spacing: normal;
     }
   }
 
@@ -79,7 +79,6 @@ $formationDomainFontSize: 0.90em;
     font-family: 'Julius Sans One', sans-serif;
     @include minimalistSection(1);
     margin-top: 2.188em;
-    margin-bottom: $margin;
   }
 
   .contact_title {
@@ -95,11 +94,17 @@ $formationDomainFontSize: 0.90em;
   }
 
   .contact_item {
+    flex-wrap: nowrap;
     margin-top: 0.625em;
   }
 
   .contact_icon {
     margin-right: 10px;
+  }
+
+  .contact_value {
+    flex: none;
+    max-width: calc(100% - 25px);
   }
 
   .cv_resume {

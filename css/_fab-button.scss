@@ -93,6 +93,12 @@ $hamburger-spacing: 8px;
 
 .menu-item {
 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+
   &:hover{
     background: #E91E63;
   }
