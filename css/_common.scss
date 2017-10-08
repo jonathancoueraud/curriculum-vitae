@@ -149,6 +149,7 @@ h1, h2, h3, h4, h5 {
 
 .skills_item:after {
   content: ',';
+  padding-right: 5px;
 }
 
 .skills_item:last-child:after {
