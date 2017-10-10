@@ -14,10 +14,11 @@ $menu-items: 2;
 %ball {
   background: $fg;
   border-radius: 100%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin-left: -40px;
   position: absolute;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.26);
   bottom: 0;
   color: white;
   text-align: center;
@@ -62,7 +63,8 @@ $hamburger-spacing: 8px;
   transform: translate3d(0, $hamburger-spacing, 0);
 }
 
-.menu-open:checked + .menu-open-button {
+.menu-open:checked + .menu-open-button,
+.menu:hover + .menu-open-button {
   .hamburger-1 {
     transform: translate3d(0, 0, 0) rotate(45deg);
   }
@@ -72,6 +74,10 @@ $hamburger-spacing: 8px;
   .hamburger-3 {
     transform: translate3d(0, 0, 0) rotate(-45deg);
   }
+}
+
+.menu-open:checked + .menu-open-button {
+  background: #E91E63;
 }
 
 .menu {
@@ -97,7 +103,7 @@ $hamburger-spacing: 8px;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 
   &:hover{
     background: #E91E63;
@@ -123,13 +129,15 @@ $hamburger-spacing: 8px;
   transform: scale(1.2, 1.2) translate3d(0, 0, 0);
 }
 
-.menu-open:checked + .menu-open-button {
+.menu-open:checked + .menu-open-button,
+.menu:hover + .menu-open-button {
   transition-timing-function: linear;
   transition-duration: 200ms;
   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
 }
 
-.menu-open:checked ~ .menu-item {
+.menu-open:checked ~ .menu-item,
+.menu:hover .menu-item {
   transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   @for $i from 1 through $menu-items {
 

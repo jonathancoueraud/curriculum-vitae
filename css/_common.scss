@@ -80,6 +80,7 @@ h1, h2, h3, h4, h5 {
 
 .guides_book:before {
   content: '-';
+  padding: 0.188em;
 }
 
 .job_location {
@@ -106,7 +107,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .job_description {
-  margin: 0.188em 0 0;
+  margin: 0.3em 0 0;
 }
 
 .job_description-realisation:before {
