@@ -130,8 +130,7 @@ $hamburger-spacing: 8px;
   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
 }
 
-.menu-open:checked ~ .menu-item,
-.menu:hover .menu-item {
+.menu-open:checked ~ .menu-item{
   transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   @for $i from 1 through $menu-items {
 
