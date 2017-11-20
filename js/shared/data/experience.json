@@ -1,4 +1,4 @@
-{
+  {
   "title": "expérience",
   "jobs": [
     {
@@ -10,10 +10,10 @@
       "description": "Développement de la widget plate-forme, un CMS propriétaire à la base des applications web de Dassault Systèmes.",
       "realisations": [
         {
-          "description": "Spring Boot Servlet Stack - Développeur"
+          "description": "Spring Boot Servlet Stack ; Développeur"
         },
         {
-          "description": "Pipeline d'intégration continue - Maintenance"
+          "description": "Pipeline d'intégration continue ; Maintenance"
         }
       ]
     },
@@ -42,16 +42,16 @@
       "description": "Conception de l'application web 3DSpace, un service de gestion d'ACLs pour données PLM",
       "realisations": [
         {
-          "description": "Experience utilisateur Mobile First - Co-worker"
+          "description": "Experience utilisateur Mobile First ; Co-worker"
         },
         {
-          "description": "Front-End Backbonejs - Implémentation"
+          "description": "Front-End Backbonejs ; Implémentation"
         },
         {
-          "description": "REST API - Lead Architecte"
+          "description": "REST API ; Lead Architecte"
         },
         {
-          "description": "Infrastructure Front-End - Co-Leader"
+          "description": "Infrastructure Front-End ; Co-Leader"
         }
       ]
     },
